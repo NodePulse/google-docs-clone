@@ -1,4 +1,6 @@
 import { LucideIcon } from "lucide-react";
+import { Doc } from "../../convex/_generated/dataModel";
+import { PaginationStatus } from "convex/react";
 
 export interface ToolbarButtonProps {
   onClick?: () => void;
@@ -17,4 +19,14 @@ export interface MarkerProps {
 export interface FullScreenLoaderProps {
   label?: string;
   className?: string;
+}
+
+export interface DocumentsTableProps {
+  documents: Doc<"documents">[] | undefined;
+  loadMore: (numItems: number) => void;
+  status: PaginationStatus;
+}
+
+export interface DocumentRowProps {
+  document: Doc<"documents">;
 }

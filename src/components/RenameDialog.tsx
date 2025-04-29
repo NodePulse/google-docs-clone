@@ -15,6 +15,7 @@ import {
 } from "./ui/dialog";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+import { toast } from "sonner";
 
 const RenameDialog = ({
   documentId,
@@ -31,12 +32,13 @@ const RenameDialog = ({
     e.preventDefault();
     setIsRenaming(true);
 
-    update({ id: documentId, title: title.trim() || "Untitled" }).finally(
-      () => {
+    update({ id: documentId, title: title.trim() || "Untitled" })
+      .catch(() => toast.error("Something went wrong"))
+      .then(() => toast.success("Document Renamed!"))
+      .finally(() => {
         setIsRenaming(false);
         setOpen(false);
-      }
-    );
+      });
   };
 
   return (

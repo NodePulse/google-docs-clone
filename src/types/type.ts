@@ -1,6 +1,7 @@
 import { LucideIcon } from "lucide-react";
-import { Doc } from "../../convex/_generated/dataModel";
+import { Doc, Id } from "../../convex/_generated/dataModel";
 import { PaginationStatus } from "convex/react";
+import React from "react";
 
 export interface ToolbarButtonProps {
   onClick?: () => void;
@@ -29,4 +30,21 @@ export interface DocumentsTableProps {
 
 export interface DocumentRowProps {
   document: Doc<"documents">;
+}
+
+export interface DocumentMenuProps {
+  documentId: Id<"documents">;
+  title: string;
+  onNewTab: (id: Id<"documents">) => void;
+}
+
+export interface RemoveDialogProps {
+  documentId: Id<"documents">;
+  children: React.ReactNode;
+}
+
+export interface RenameDialogProps {
+  documentId: Id<"documents">;
+  initialTitle: string;
+  children: React.ReactNode;
 }

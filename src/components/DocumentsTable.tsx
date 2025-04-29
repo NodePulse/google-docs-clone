@@ -9,6 +9,7 @@ import {
   TableRow,
 } from "./ui/table";
 import DocumentRow from "./DocumentRow";
+import { Button } from "./ui/button";
 
 const DocumentsTable = ({
   documents,
@@ -51,6 +52,16 @@ const DocumentsTable = ({
           )}
         </Table>
       )}
+      <div className="flex items-center justify-center">
+        <Button
+          variant={"ghost"}
+          size={"sm"}
+          onClick={() => loadMore(5)}
+          disabled={status !== "CanLoadMore"}
+        >
+          {status === "CanLoadMore" ? "Load more" : "End of results"}
+        </Button>
+      </div>
     </div>
   );
 };

@@ -5,8 +5,9 @@ import MenuBar from "@/components/MenuBar";
 import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 import { Avatars } from "./avatars";
 import Inbox from "./inbox";
+import { NavbarProps } from "@/types/type";
 
-const Navbar = () => {
+const Navbar = ({ data }: NavbarProps) => {
   return (
     <nav className="flex items-center justify-between">
       <div className="flex gap-2 items-center">
@@ -15,8 +16,8 @@ const Navbar = () => {
         </Link>
 
         <div className="flex flex-col">
-          <DocumentInput />
-          <MenuBar />
+          <DocumentInput title={data.title} id={data._id} />
+          <MenuBar data={data} />
         </div>
       </div>
       <div className="flex gap-3 items-center pl-6">

@@ -1,7 +1,8 @@
 import { LucideIcon } from "lucide-react";
 import { Doc, Id } from "../../convex/_generated/dataModel";
-import { PaginationStatus } from "convex/react";
+import { PaginationStatus, Preloaded } from "convex/react";
 import React from "react";
+import { api } from "../../convex/_generated/api";
 
 export interface ToolbarButtonProps {
   onClick?: () => void;
@@ -48,14 +49,29 @@ export interface RenameDialogProps {
   initialTitle: string;
   children: React.ReactNode;
 }
-
 export type User = {
   id: string;
   name: string;
   avatar: string;
 };
-
 export interface AvatarProps {
   src: string;
   name: string;
+}
+
+export interface DocumentProps {
+  preloadedDocument: Preloaded<typeof api.documents.getById>;
+}
+
+export interface DocumentIdPageProps {
+  params: Promise<{ documentId: Id<"documents"> }>;
+}
+
+export interface NavbarProps {
+  data: Doc<"documents">;
+}
+
+export interface DocumentInputProps {
+  title: string;
+  id: Id<"documents">;
 }

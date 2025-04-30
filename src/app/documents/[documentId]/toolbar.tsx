@@ -150,10 +150,6 @@ const Toolbar = () => {
       {sections[2].map((item) => (
         <ToolbarButton key={item.label} {...item} />
       ))}
-      {/* table */}
-      {/* code block */}
-      {/* horizontal rule */}
-      {/* clear formatting */}
     </div>
   );
 };

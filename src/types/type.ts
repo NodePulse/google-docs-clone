@@ -53,6 +53,7 @@ export type User = {
   id: string;
   name: string;
   avatar: string;
+  color: string;
 };
 export interface AvatarProps {
   src: string;

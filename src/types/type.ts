@@ -75,3 +75,7 @@ export interface DocumentInputProps {
   title: string;
   id: Id<"documents">;
 }
+
+export interface EditorProps {
+  initialContent?: string | undefined;
+}

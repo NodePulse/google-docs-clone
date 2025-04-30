@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Google Docs Clone
 
-## Getting Started
+A real-time collaborative document editing application built with Next.js, React, and Liveblocks. This project emulates core functionalities of Google Docs, enabling multiple users to edit documents simultaneously with live updates.
 
-First, run the development server:
+## 🚀 Features
+
+- **Real-Time Collaboration**: Multiple users can edit the same document concurrently, with changes reflected instantly across all clients.
+- **Rich Text Editing**: Utilizes Quill.js for a comprehensive rich text editing experience.
+- **User Presence Indicators**: Displays active users and their cursors within the document.
+- **Document Persistence**: Changes are saved automatically to ensure data is not lost.
+- **Responsive Design**: Optimized for various screen sizes and devices.
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js, React, TypeScript, Tailwind CSS
+- **Editor**: Tiptap Editor
+- **Real-Time Backend**: Liveblocks
+- **State Management**: Convex
+- **Deployment**: Vercel
+
+## 📦 Installation
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/NodePulse/google-docs-clone.git
+   cd google-docs-clone
+   ```
+
+2. **Install dependencies:**
+
+   ```
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Setup Environment Variables**
+
+Copy the example file and fill in your credentials:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cp .env.example .env.local
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Edit `.env.local` and add your keys from Liveblocks, Convex, and Clerk:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```env
+# Liveblocks
+NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY=your_public_liveblocks_key
+LIVEBLOCK_SECRET_KEY=your_secret_liveblocks_key
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Convex
+CONVEX_DEPLOYMENT=your_convex_deployment_url
+NEXT_PUBLIC_CONVEX_URL=your_convex_public_url
 
-## Learn More
+# Clerk
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Run the Development Server**
+   ```
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📤 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is optimized for deployment on **Vercel**.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Follow these steps:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
+
+---
+
+## 🙌 Acknowledgements
+
+- [Liveblocks](https://liveblocks.io/)
+- [Tiptap Editor](https://quilljs.com/)
+- [Convex](https://www.convex.dev/)
+- [Vercel](https://vercel.com/)
+- [Clerk](https://clerk.dev/)

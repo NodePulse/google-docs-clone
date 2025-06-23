@@ -2,21 +2,40 @@
 
 A real-time collaborative document editing application built with Next.js, React, and Liveblocks. This project emulates core functionalities of Google Docs, enabling multiple users to edit documents simultaneously with live updates.
 
+---
+
+## 🔗 Live Link
+
+👉 [**Try the App Live**](https://google-docs-clone.vercel.app)
+
+---
+
+## 🖼️ UI Preview
+
+![UI Preview](./public/images/ui-preview.png)
+
+---
+
 ## 🚀 Features
 
-- **Real-Time Collaboration**: Multiple users can edit the same document concurrently, with changes reflected instantly across all clients.
-- **Rich Text Editing**: Utilizes Quill.js for a comprehensive rich text editing experience.
-- **User Presence Indicators**: Displays active users and their cursors within the document.
-- **Document Persistence**: Changes are saved automatically to ensure data is not lost.
-- **Responsive Design**: Optimized for various screen sizes and devices.
+- **Real-Time Collaboration**: Multiple users can edit the same document concurrently, with changes reflected instantly across all clients.  
+- **Rich Text Editing**: Utilizes Quill.js for a comprehensive rich text editing experience.  
+- **User Presence Indicators**: Displays active users and their cursors within the document.  
+- **Document Persistence**: Changes are saved automatically to ensure data is not lost.  
+- **Responsive Design**: Optimized for various screen sizes and devices.  
+
+---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Next.js, React, TypeScript, Tailwind CSS
-- **Editor**: Tiptap Editor
-- **Real-Time Backend**: Liveblocks
-- **State Management**: Convex
-- **Deployment**: Vercel
+- **Frontend**: Next.js, React, TypeScript, Tailwind CSS  
+- **Editor**: Tiptap Editor  
+- **Real-Time Backend**: Liveblocks  
+- **State Management**: Convex  
+- **Authentication**: Clerk  
+- **Deployment**: Vercel  
+
+---
 
 ## 📦 Installation
 
@@ -65,10 +84,11 @@ CLERK_SECRET_KEY=your_clerk_secret_key
    # or
    yarn dev
    ```
+---
 
 ## 📤 Deployment
 
-This project is optimized for deployment on **Vercel**.
+This project is optimized for deployment on **Vercel**. Just push your repository and connect it via your Vercel dashboard.
 
 ---
 
@@ -87,7 +107,7 @@ Contributions are welcome! Follow these steps:
 ## 🙌 Acknowledgements
 
 - [Liveblocks](https://liveblocks.io/)
-- [Tiptap Editor](https://quilljs.com/)
+- [Tiptap Editor](https://tiptap.dev/)
 - [Convex](https://www.convex.dev/)
 - [Vercel](https://vercel.com/)
 - [Clerk](https://clerk.dev/)

@@ -4,15 +4,19 @@ A real-time collaborative document editing application built with Next.js, React
 
 ---
 
-## 🔗 Live Link
+## 🔗 Live Demo
 
-👉 [**Try the App Live**](https://google-docs-clone.vercel.app)
+<p align="center">
+  <a href="https://google-docs-clone-pied.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀%20Live%20App-Google%20Docs%20Clone-blueviolet?style=for-the-badge&logo=vercel&logoColor=white" alt="Live App Badge" />
+  </a>
+</p>
 
 ---
 
 ## 🖼️ UI Preview
 
-![UI Preview](./public/images/ui-preview.png)
+![UI Preview](./public/ui-preview.png)
 
 ---
 
@@ -66,7 +70,6 @@ Edit `.env.local` and add your keys from Liveblocks, Convex, and Clerk:
 
 ```env
 # Liveblocks
-NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY=your_public_liveblocks_key
 LIVEBLOCK_SECRET_KEY=your_secret_liveblocks_key
 
 # Convex
